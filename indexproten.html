@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="ru"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +7,10 @@
     <title>Porten</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
-    
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="http://fonts.cdnfonts.com/css/post-no-bills-jaffna" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet"> 
+
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -19,17 +18,17 @@
      <header class="header">
        <div class="top-line">
          <div class="info">
-          <div class=" head  ">8(812)123-45-67⠀⠀⠀|</div>
-          <div class=" head ">⠀⠀⠀Работаем 7 дней в неделю⠀⠀⠀|</div>
-          <div class=" head ">⠀⠀⠀9:00-18:00</div>
+          <div class=" head ">8(812)123-45-67⠀⠀ |</div>
+          <div class=" head ">Работаем 7 дней в неделю⠀|</div>
+          <div class=" head ">9:00-18:00</div>
          </div>
         <div class=" head ">Войти/Регистрация</div>
        </div>
      
-                            <!--Навигация-->
+    <!--Навигация-->
 
      <nav class="navigation">
-       <div class=" nav logo">Porten</div>
+       <div class="logo">Porten</div>
        <div class="menu">
         <a class="menu-link nav liked active">Понравилось</a>
         <a class=" nav personal-account">Личный кабинет</a>
@@ -56,33 +55,56 @@
       <img  class="background" src="background.jfif" alt="">
       <div class="text-na-img">
         <div class="title-block">
-          <div class="title">Porten</div>
-          <div class="line"> </div>
-          <div class="subtitle">санкт-петербург</div>
+          <span class="title">PORTEN</span>
+          <!-- <div class="line"> </div> Кста устарелый метод -->
+          <hr class="line"/>
+          <span class="subtitle">санкт-петербург</span>
         </div>
-      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias debitis nihil, hic, totam laboriosam ducimus ipsum nemo molestiae expedita eos, optio sapiente necessitatibus illo. Aperiam repellat optio excepturi consectetur reprehenderit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quo quasi inventore itaque mollitia autem at earum fuga dignissimos ex? Voluptatum dicta excepturi error odit, facere rerum delectus debitis fuga.</span>
+      <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias debitis nihil, hic, totam laboriosam ducimus ipsum nemo molestiae expedita eos, optio sapiente necessitatibus illo. Aperiam repellat optio excepturi consectetur reprehenderit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quo quasi inventore itaque mollitia autem at earum fuga dignissimos ex? Voluptatum dicta excepturi error odit, facere rerum delectus debitis fuga.</span>
 
       </div>
     </div> 
     </section>
-     
-      <section class="new-collection-block">
-        <div class="new-season">
-          <h2>СЕЗОН 2020/21</h2>
-          <div class="products">
-            <div class="product-card">
-              <img src="./62050 1.png" alt="" srcset="">
-              <span class="product-name">jopa</span>
-              <span class="price">324234 rubley21</span>
-            </div>
+      <section class="section">
+        <div class="section__new_season">
+          <h2 class="section_title">СЕЗОН 2020/21</h2>
+          <div class="new_season__products" >
+            <article class="product_card" v-for="product in products">
+              <img class="product_card__image" src="./Rolex.png" alt="" srcset="">
+              <span class="product_card__name">{{product.name}}</span>
+              <span class="product_card__price">{{product.price}}</span>
+            </article>
           </div>
+         
         </div>
-        <div></div>
-
+        <div class="section__new_collection">
+          <img class="new_collection__image" src="./123.jpg" alt="">
+          <div class="new_collection__text">
+            <h2 class="section_title">Новая коллекция</h2>
+            <hr class="new_collection__line">
+            <a class="new_collection__link" href="#">Каталог</a>
+          </div>
+         
+        </div>
       </section>
+      <!-- жопа -->
+
+    <section class="section section__new_products">
+      <h2 class="section_title">новые поступления</h2>
+      <div class="new_products__products">
+        <article class="product_card" v-for="product in products">
+          <img class="product_card__image" src="./Rolex.png" alt="" srcset="">
+          <span class="product_card__name">{{product.name}}</span>
+          <span class="product_card__price">{{product.price}}</span>
+        </article>
+      </div>
+    
+    </section>
     </main>
     <footer>
 
     </footer>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="vue.js"></script>
 </body>
 </html>
